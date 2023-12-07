@@ -7,3 +7,11 @@ Louis George Cafe per paragrafi e testo normale
 #5c2414 colore principale
 #b3b6b8 colore sfondo
 #453c39 colore testo */
+
+.logo-img{
+    max-width: 150px;
+}
+
+body{
+    background-color: rgb(236, 238, 243);
+}
