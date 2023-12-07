@@ -1,7 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\PublicController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,3 +16,4 @@ use App\Http\Controllers\PublicController;
 */
 
 Route::get('/', [PublicController::class, 'welcome'])->name('welcome');
+Route::get('/newAnnouncements', [AnnouncementController::class, 'newAnnouncements'])->name('newAnnouncements');
