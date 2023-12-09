@@ -7,6 +7,18 @@ Louis George Cafe per paragrafi e testo normale
 #5c2414 colore principale
 #b3b6b8 colore sfondo
 #453c39 colore testo */
+:root{
+    --Color-G: rgb(69, 60, 57);
+    --Color-B: rgb(92, 36, 20);
+}
+
+.text-G{
+    color: var(--Color-G);
+}
+.tect-B{
+    color: var(--Color-B);
+}
+
 
 .logo-img{
     max-width: 150px;
@@ -15,3 +27,60 @@ Louis George Cafe per paragrafi e testo normale
 body{
     background-color: rgb(236, 238, 243);
 }
+/* SEZIONE REGISTRATI/LOGIN/LOGOUT */
+.logo-register {
+    margin-right: 15px;
+    color: rgb(69, 60, 57);
+}
+
+.register{
+    text-decoration: none;
+    color: rgb(69, 60, 57);
+    font-family: 'Kalnia', serif;
+}
+.register:hover{
+    font-weight: bold;
+    color: rgb(92, 36, 20);
+}
+
+.logo-login {
+    margin-right: 15px;
+    color: rgb(69, 60, 57);
+}
+.login{
+    text-decoration: none;
+    color: rgb(69, 60, 57);
+    font-family: 'Kalnia', serif;
+}
+.login:hover{
+    font-weight: bold;
+    color: rgb(92, 36, 20);
+}
+
+.btn{
+    border: none;
+    color: white;
+    max-width: max-content;
+    background-color: rgb(69, 60, 57);
+}
+.btn:hover{
+    color: white;
+    background-color: rgb(92, 36, 20);
+}
+.dropdown-menu{
+    background-color: rgb(92, 36, 20);
+}
+.dropdown-item{
+    color: white;
+    background-color: rgb(92, 36, 20);
+}
+.dropdown-item:hover{
+    background-color: transparent;
+    font-weight: bold;
+    color: white;
+}
+/* FINE SEZIONE REGISTRATI/LOGIN/LOGOUT */
+
+/* SEZIONE HEADER HOMEPAGE */
+
+

@@ -18,7 +18,7 @@
                 @auth
 
                     <li class="nav-item">
-                        <a href ="{{ route('newAnnouncements') }}" class="nav-link">Carica</a>
+                        <a href ="{{ route('newAnnouncements') }}" class="nav-link">Crea Annuncio</a>
                     </li>
 
                 @endauth
