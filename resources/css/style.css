@@ -1,5 +1,5 @@
 /* FONT E COLORI */
-/* 
+/*
 DirtyCrown per Titoli e sottotitoli
 Louis George Cafe per paragrafi e testo normale
 
@@ -26,6 +26,20 @@ Louis George Cafe per paragrafi e testo normale
 
 body{
     background-color: rgb(236, 238, 243);
+    height: 4000px;
+}
+/* Nav */
+nav{
+    background-color: rgb(236, 238, 243);
+}
+/* Header custom */
+.box-header{
+    background-color: rgb(236, 238, 243);
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.16);
+}
+#header-custom{
+    border-bottom: 1px solid rgba(128, 128, 128, 0.607);
+    padding-bottom: 2em;
 }
 /* SEZIONE REGISTRATI/LOGIN/LOGOUT */
 .logo-register {
