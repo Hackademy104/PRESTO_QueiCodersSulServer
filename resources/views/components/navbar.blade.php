@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg py-4">
+<nav class="navbar navbar-expand-lg py-1 pb-2">
 
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Navbar</a>
