@@ -9,16 +9,9 @@
             <label for="" class="mb-2">Categoria:</label>
             <select wire:model='category' class="form-select" aria-label="Default select example">
                 <option selected>Open this select menu</option>
-                <option value="1">Fotocamere</option>
-                <option value="2">FrancoBolli</option>
-                <option value="3">Lampadari</option>
-                <option value="4">Libri</option>
-                <option value="5">Mobili</option>
-                <option value="6">Monete</option>
-                <option value="7">Quadri</option>
-                <option value="8">Utensili</option>
-                <option value="9">Vasi</option>
-                <option value="10">Vinili</option>
+                @foreach ($categories as $category)
+                <option value="{{$category->id}}">{{$category->name}}</option>
+                @endforeach
             </select>
         </div>
 

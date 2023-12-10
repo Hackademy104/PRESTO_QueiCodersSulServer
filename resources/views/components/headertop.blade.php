@@ -1,4 +1,4 @@
-<div class="container-fluid d-flex gap-2 flex-column box-header px-5 position-sticky z-1 top-0">
+<div class="container-fluid d-flex gap-2 flex-column box-header px-5  z-1 top-0">
 
     <div id = "header-custom" class="row justify-content-between ">
         <div class="col-3">
@@ -43,8 +43,6 @@
 
 
     </div>
-    <x-navbar />
-
 </div>
 </div>
 </div>

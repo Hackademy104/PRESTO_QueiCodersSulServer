@@ -1,5 +1,4 @@
-<nav class="navbar navbar-expand-lg py-1 pb-2">
-
+<nav id="nav" class="navbar navbar-expand-lg py-1 position-sticky pb-2">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -15,15 +14,11 @@
                 <li class="nav-item">
                     <a class="nav-link" aria-disabled="true">Disabled</a>
                 </li>
-
                 @auth
-
                     <li class="nav-item">
                         <a href ="{{ route('newAnnouncements') }}" class="nav-link">Crea Annuncio</a>
                     </li>
-
                 @endauth
-
             </ul>
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

@@ -10,7 +10,8 @@
 </head>
 
 <body>
-    <x-headertop />
+    <x-headertop/>
+    <x-navbar />
 
 
 
