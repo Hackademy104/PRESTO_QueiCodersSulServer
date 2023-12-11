@@ -2,16 +2,23 @@
 
 namespace App\Livewire;
 
+use Livewire\Attributes\Validate;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 use App\Models\Announcement;
 
 class FormCaricaAnnunci extends Component
 {
+    #[Validate('required')] 
     public $name;
-    public $categories;
+    #[Validate('required')] 
     public $category;
+    #[Validate('required')] 
     public $price;
+    #[Validate('required')] 
     public $description;
+
+    public $categories;
 
     public function updated($property){
         $this->validateOnly($property);
@@ -24,7 +31,8 @@ class FormCaricaAnnunci extends Component
             'name' => $this->name,
             'category' => $this->category,
             'price' => $this->price,
-            'description' => $this->description
+            'description' => $this->description,
+            'user_id' => Auth::user()->id
         ]);
 
         $this->reset();
@@ -38,6 +46,6 @@ class FormCaricaAnnunci extends Component
 
     public function render()
     {
-        return view('livewire.form-carica-annunci', );
+        return view('livewire.form-carica-annunci');
     }
 }

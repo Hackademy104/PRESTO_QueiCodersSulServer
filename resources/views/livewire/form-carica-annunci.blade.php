@@ -1,6 +1,7 @@
 <div class="h-100 d-flex align-items-center justify-content-center">
     {{-- Knowing others is intelligence; knowing yourself is true wisdom. --}}
-    <form class="w-50">
+    <form class="w-50" method="POST" wire:submit="store">
+        @csrf
         <div class="mb-3">
             <label for="name" class="form-label">Nome Prodotto: </label>
             <input wire:model='name' type="text" class="form-control" id="name" aria-describedby="emailHelp">
@@ -26,8 +27,7 @@
                 style="height: 100px"></textarea>
         </div>
 
-
-        <a href="{{route('welcome')}}" class="btn btn-primary mt-3">Crea Annuncio</a>
+        <button type="submit" class="btn btn-primary mt-3">Crea Annuncio</button>
     </form>
 
 </div>
