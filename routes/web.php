@@ -17,3 +17,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PublicController::class, 'welcome'])->name('welcome');
 Route::get('/newAnnouncements', [AnnouncementController::class, 'newAnnouncements'])->name('newAnnouncements');
+Route::get('/categoryShow/{category}', [AnnouncementController::class, 'categoryShow'])->name('categoryShow');

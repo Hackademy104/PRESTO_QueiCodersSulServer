@@ -26,4 +26,8 @@ class AnnouncementController extends Controller
         $annuncment->save();
         return redirect('/');
     }
+
+    public function categoryShow(Category $category){
+        return view('annunci.categoryShow', compact('category'));
+    }
 }

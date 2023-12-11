@@ -11,7 +11,7 @@
 
 <body>
     <x-headertop/>
-    <x-navbar />
+    <x-navbar/>
 
 
 

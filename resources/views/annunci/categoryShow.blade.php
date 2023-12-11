@@ -1,8 +1,8 @@
 <x-layout>
-    <x-main/>
+
     <div class = "container">
         <div class="row">
-            @foreach ($announcements as $announcement)
+            @forelse ($category->announcements as $announcement)
                 <div class="card m-5" style="width: 18rem;">
                     <img src="https://picsum.photos/300" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -14,8 +14,14 @@
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
-            @endforeach
+                @empty 
+                    <div class="col-12">
+                        <p>Non sono presenti annunci per questa categoria!</p>
+                        <p>Pubblicane uno: <a class="btn btn-primary" href="{{route('newAnnouncements')}}">Crea Annuncio</a></p>
+                    </div>
+                @endforelse
 
         </div>
     </div>
+
 </x-layout>

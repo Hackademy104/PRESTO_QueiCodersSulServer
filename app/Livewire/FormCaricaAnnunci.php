@@ -2,10 +2,11 @@
 
 namespace App\Livewire;
 
+use Livewire\Component;
+use App\Models\Category;
+use App\Models\Announcement;
 use Livewire\Attributes\Validate;
 use Illuminate\Support\Facades\Auth;
-use Livewire\Component;
-use App\Models\Announcement;
 
 class FormCaricaAnnunci extends Component
 {
@@ -17,8 +18,6 @@ class FormCaricaAnnunci extends Component
     public $price;
     #[Validate('required')] 
     public $description;
-
-    public $categories;
 
     protected $rules = [
         'name' => 'required|string|max:255',
@@ -35,10 +34,10 @@ class FormCaricaAnnunci extends Component
     public function store()
     {
         $this->validate();
+        $category = Category::find($this->category);
 
-        $announcement = Announcement::create([
+        $announcement = $category->announcements()->create([
             'name' => $this->name,
-            'category' => $this->category,
             'price' => $this->price,
             'description' => $this->description,
             'user_id' => Auth::user()->id
