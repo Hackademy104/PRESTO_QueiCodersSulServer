@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Annuncments;
 use App\Http\Requests\StoreAnnuncments;
+use App\Models\Announcement;
 
 class AnnouncementController extends Controller
 {
@@ -14,20 +15,15 @@ class AnnouncementController extends Controller
         return view('annunci.newAnnouncements', compact('categories'));
     }
 
-    public function create_annuncment (StoreAnnuncments $request) {
-        dd($request->category);
-        $annuncment = Annuncments::create([
-            'name' => $request->name,
-            'category_id' => $request->category,
-            'price' => $request->price,
-            'description' => $request->description
-        ]);
-
-        $annuncment->save();
-        return redirect('/');
-    }
 
     public function categoryShow(Category $category){
         return view('annunci.categoryShow', compact('category'));
+    }
+    public function showAnnouncement(Announcement $announcement){
+        return view('annunci.showAnnouncement', compact('announcement'));
+    }
+    public function indexAnnouncement(){
+        $announcements = Announcement::paginate(5);
+        return view('annunci.indexAnnouncement', compact('announcements'));
     }
 }
