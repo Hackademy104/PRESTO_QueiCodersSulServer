@@ -13,6 +13,13 @@ class FormCaricaAnnunci extends Component
     public $price;
     public $description;
 
+    protected $rules = [
+        'name' => 'required|string|max:255',
+        'category' => 'required|exists:categories,id', // Assicurati che il nome della tabella delle categorie sia corretto
+        'price' => 'required|numeric',
+        'description' => 'required|string',
+    ];
+
     public function updated($property){
         $this->validateOnly($property);
     }
@@ -24,7 +31,8 @@ class FormCaricaAnnunci extends Component
             'name' => $this->name,
             'category' => $this->category,
             'price' => $this->price,
-            'description' => $this->description
+            'description' => $this->description,
+            'user_id' => auth()->id()
         ]);
 
         $this->reset();
@@ -33,11 +41,14 @@ class FormCaricaAnnunci extends Component
 
     public function mount($categories)
     {
+        
         $this->categories = $categories;
     }
 
     public function render()
     {
-        return view('livewire.form-carica-annunci', );
+    
+        return view('livewire.form-carica-annunci', compact('categories'));
     }
+    
 }
