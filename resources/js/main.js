@@ -19,3 +19,26 @@ window.addEventListener("scroll", () => {
         logo.src = "http://127.0.0.1:5500/media/logo.png"
     }
 }) */
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    var alertMessages = document.querySelectorAll('.alert-success.fade-out');
+    
+    function hideMessage(alertMessage) {
+        alertMessage.style.transition = "opacity 1s";
+        alertMessage.style.opacity = 0;
+        setTimeout(function() {
+            alertMessage.remove();
+        }, 1000);
+    }
+
+    alertMessages.forEach(function(alertMessage) {
+        document.getElementById('submitBtn').addEventListener('click', function() {
+            hideMessage(alertMessage);
+        });
+
+        setTimeout(function() {
+            hideMessage(alertMessage);
+        }, 10000); // 10000 millisecondi = 10 secondi
+    });
+});

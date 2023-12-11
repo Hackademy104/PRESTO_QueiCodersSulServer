@@ -10,6 +10,8 @@ Louis George Cafe per paragrafi e testo normale
 :root{
     --Color-G: rgb(69, 60, 57);
     --Color-B: rgb(92, 36, 20);
+    --color-N: #886c52
+
 }
 
 .text-G{
@@ -24,6 +26,8 @@ Louis George Cafe per paragrafi e testo normale
     max-width: 150px;
 }
 
+
+
 body{
     background-color: rgb(236, 238, 243);
     height: 4000px;
@@ -32,12 +36,13 @@ body{
 nav{
     position: sticky;
     top: 0;
-    background-color: rgb(236, 238, 243);
+    background-color: var(--color-N);
     z-index: 999;
+    margin-bottom: 20px;
 }
 /* Header custom */
 .box-header{
-    background-color: rgb(236, 238, 243);
+    background-color: var(--color-N);
     box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.16);
 }
 #header-custom{
@@ -102,4 +107,24 @@ nav{
 .img-carousel{
     height: 500px;
     object-fit: cover;
+}
+
+/* FORM CARICA ANNUNCI */
+
+.alert {
+    width: 100%;
+    margin: 0px;
+    margin-top: -18px;
+    
+}
+
+/* PAGIINA ANNUNCI */
+
+.pagination {
+    background-color: rgb(236, 238, 243);
+}
+
+.page-item {
+    margin-left: 10px;
+    background-color: rgb(236, 238, 243);
 }

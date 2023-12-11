@@ -1,12 +1,15 @@
 <div class="h-100 d-flex flex-column align-items-center justify-content-center">
-    {{-- Knowing others is intelligence; knowing yourself is true wisdom. --}}
-    <div>
+    <div class="w-100">
         @if (session()->has('message'))
             <div class="alert alert-success">
                 {{ session('message') }}
             </div>
         @endif
     </div>
+
+    <h2 class="display-2 text-center mt-5">Crea il tuo annuncio</h2>
+
+    {{-- Knowing others is intelligence; knowing yourself is true wisdom. --}}
     <form wire:submit.prevent="store" class="w-50" method="POST" wire:submit="store">
         @csrf
         <div class="mb-3">

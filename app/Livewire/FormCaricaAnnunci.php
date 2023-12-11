@@ -35,6 +35,7 @@ class FormCaricaAnnunci extends Component
     {
         $this->validate();
         $category = Category::find($this->category);
+        
 
         $announcement = $category->announcements()->create([
             'name' => $this->name,
