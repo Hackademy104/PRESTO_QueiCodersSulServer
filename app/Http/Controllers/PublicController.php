@@ -8,7 +8,7 @@ class PublicController extends Controller
 {
     public function welcome()
     {
-        $announcements = Announcement::orderBy('created_at')->take(6)->get();
+        $announcements = Announcement::orderBy('created_at', 'desc')->take(6)->get();
 
         return view('welcome', compact('announcements'));
     }

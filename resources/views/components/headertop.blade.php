@@ -6,7 +6,7 @@
         </div>
         <div class="col-6 d-flex justify-content-center">
             <a href="{{ route('welcome') }}">
-                <img class="logo-img" src="media/PRESTO.png" alt="img">
+                <img class="logo-img" src="/media/PRESTO.png" alt="img">
             </a>
         </div>
         <div class="col-3 d-flex flex-column justify-content-center gap-2">

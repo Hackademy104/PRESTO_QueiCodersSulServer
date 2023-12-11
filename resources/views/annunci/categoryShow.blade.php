@@ -11,7 +11,7 @@
                         <p class="card-text">{{ $announcement->category->name }}</p>
                         <p class="card-text">{{ $announcement->description }}</p>
 
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="{{route('showAnnouncement', compact('announcement'))}}" class="btn btn-primary">Vedi di più</a>
                     </div>
                 </div>
                 @empty 
