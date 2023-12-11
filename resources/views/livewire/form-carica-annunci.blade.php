@@ -1,17 +1,25 @@
-<div class="h-100 d-flex align-items-center justify-content-center">
+<div class="h-100 d-flex flex-column align-items-center justify-content-center">
     {{-- Knowing others is intelligence; knowing yourself is true wisdom. --}}
-    <form class="w-50" method="POST" wire:submit="store">
+    <div>
+        @if (session()->has('message'))
+            <div class="alert alert-success">
+                {{ session('message') }}
+            </div>
+        @endif
+    </div>
+    <form wire:submit.prevent="store" class="w-50" method="POST" wire:submit="store">
         @csrf
         <div class="mb-3">
             <label for="name" class="form-label">Nome Prodotto: </label>
             <input wire:model='name' type="text" class="form-control" id="name" aria-describedby="emailHelp">
         </div>
         <div>
+
             <label for="" class="mb-2">Categoria:</label>
             <select wire:model='category' class="form-select" aria-label="Default select example">
                 <option selected>Open this select menu</option>
                 @foreach ($categories as $category)
-                <option value="{{$category->id}}">{{$category->name}}</option>
+                    <option value="{{ $category->id }}">{{ $category->name }}</option>
                 @endforeach
             </select>
         </div>
@@ -27,7 +35,9 @@
                 style="height: 100px"></textarea>
         </div>
 
+
         <button type="submit" class="btn btn-primary mt-3">Crea Annuncio</button>
     </form>
+
 
 </div>

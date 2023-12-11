@@ -20,13 +20,22 @@ class FormCaricaAnnunci extends Component
 
     public $categories;
 
-    public function updated($property){
+    protected $rules = [
+        'name' => 'required|string|max:255',
+        'category' => 'required|exists:categories,id', // Assicurati che il nome della tabella delle categorie sia corretto
+        'price' => 'required|numeric',
+        'description' => 'required|string',
+    ];
+
+    public function updated($property)
+    {
         $this->validateOnly($property);
     }
 
-    public function store(){
+    public function store()
+    {
         $this->validate();
-        
+
         $announcement = Announcement::create([
             'name' => $this->name,
             'category' => $this->category,
@@ -37,11 +46,6 @@ class FormCaricaAnnunci extends Component
 
         $this->reset();
         session()->flash('message', 'success');
-    }
-
-    public function mount($categories)
-    {
-        $this->categories = $categories;
     }
 
     public function render()
