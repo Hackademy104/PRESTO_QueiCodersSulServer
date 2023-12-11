@@ -2,15 +2,17 @@
 
 namespace App\Livewire;
 
-use Livewire\Component;
 use App\Models\Announcement;
+use Livewire\Component;
 
 class FormCaricaAnnunci extends Component
 {
     public $name;
-    public $categories;
+
     public $category;
+
     public $price;
+
     public $description;
 
     protected $rules = [
@@ -20,35 +22,30 @@ class FormCaricaAnnunci extends Component
         'description' => 'required|string',
     ];
 
-    public function updated($property){
+    public function updated($property)
+    {
         $this->validateOnly($property);
     }
 
-    public function store(){
+    public function store()
+    {
         $this->validate();
-        
+
         $announcement = Announcement::create([
             'name' => $this->name,
             'category' => $this->category,
             'price' => $this->price,
             'description' => $this->description,
-            'user_id' => auth()->id()
+            'user_id' => auth()->id(),
         ]);
 
         $this->reset();
         session()->flash('message', 'success');
     }
 
-    public function mount($categories)
-    {
-        
-        $this->categories = $categories;
-    }
-
     public function render()
     {
-    
-        return view('livewire.form-carica-annunci', compact('categories'));
+
+        return view('livewire.form-carica-annunci');
     }
-    
 }

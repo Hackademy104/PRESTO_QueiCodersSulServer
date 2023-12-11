@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Announcement;
 
 class PublicController extends Controller
 {
-    function welcome() {
-        return view('welcome');
+    public function welcome()
+    {
+        $announcements = Announcement::orderBy('created_at')->take(6)->get();
+
+        return view('welcome', compact('announcements'));
     }
 }
