@@ -1,5 +1,5 @@
 <x-layout>
-    <x-main/>
+    <x-main />
     <div class = "container">
         <div class="row">
             @foreach ($announcements as $announcement)
@@ -7,11 +7,12 @@
                     <img src="https://picsum.photos/300" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">{{ $announcement->name }}</h5>
-                        <p class="card-text">{{ $announcement->price }}</p>
+                        <p class="card-text">{{ $announcement->price }} $</p>
                         <p class="card-text">{{ $announcement->category->name }}</p>
                         <p class="card-text">{{ $announcement->description }}</p>
 
-                        <a href="{{ route('showAnnouncement', compact('announcement')) }}" class="btn btn-primary">Vedi di più</a>
+                        <a href="{{ route('showAnnouncement', compact('announcement')) }}" class="btn btn-primary">Vedi
+                            di più</a>
                     </div>
                 </div>
             @endforeach

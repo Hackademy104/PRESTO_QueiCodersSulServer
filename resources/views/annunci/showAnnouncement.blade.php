@@ -5,13 +5,16 @@
                 <div id="showCarousel" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img class="img-fluid p-3 rounded" src="https://picsum.photos/id/27/1200/200" alt="First slide">
+                            <img class="img-fluid p-3 rounded" src="https://picsum.photos/id/27/1200/200"
+                                alt="First slide">
                         </div>
                         <div class="carousel-item">
-                            <img class="img-fluid p-3 rounded" src="https://picsum.photos/id/28/1200/200" alt="Second slide">
+                            <img class="img-fluid p-3 rounded" src="https://picsum.photos/id/28/1200/200"
+                                alt="Second slide">
                         </div>
                         <div class="carousel-item">
-                            <img class="img-fluid p-3 rounded" src="https://picsum.photos/id/29/1200/200" alt="Third slide">
+                            <img class="img-fluid p-3 rounded" src="https://picsum.photos/id/29/1200/200"
+                                alt="Third slide">
                         </div>
                     </div>
                 </div>
@@ -27,10 +30,11 @@
                 </button>
             </div>
             <h5 class="card-title">Nome: {{ $announcement->name }}</h5>
-            <p class="card-text">Prezzo: {{ $announcement->price }}</p>
+            <p class="card-text">Prezzo: {{ $announcement->price }} $</p>
             <p class="card-text">Descrizione: {{ $announcement->description }}</p>
-            <a class="my-2 border-top pt-2 border-dark card-link btn btn-success" href="{{route('categoryShow',['category'=>$announcement->category])}}"> 
-                Categoria: {{$announcement->category->name}} </a>
+            <a class="my-2 border-top pt-2 border-dark card-link btn btn-success"
+                href="{{ route('categoryShow', ['category' => $announcement->category]) }}">
+                Categoria: {{ $announcement->category->name }} </a>
         </div>
     </div>
 </x-layout>

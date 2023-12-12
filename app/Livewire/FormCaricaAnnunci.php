@@ -2,21 +2,23 @@
 
 namespace App\Livewire;
 
-use Livewire\Component;
 use App\Models\Category;
-use App\Models\Announcement;
-use Livewire\Attributes\Validate;
 use Illuminate\Support\Facades\Auth;
+use Livewire\Attributes\Validate;
+use Livewire\Component;
 
 class FormCaricaAnnunci extends Component
 {
-    #[Validate('required')] 
+    #[Validate('required')]
     public $name;
-    #[Validate('required')] 
+
+    #[Validate('required')]
     public $category;
-    #[Validate('required')] 
+
+    #[Validate('required')]
     public $price;
-    #[Validate('required')] 
+
+    #[Validate('required')]
     public $description;
 
     protected $rules = [
@@ -35,17 +37,16 @@ class FormCaricaAnnunci extends Component
     {
         $this->validate();
         $category = Category::find($this->category);
-        
 
         $announcement = $category->announcements()->create([
             'name' => $this->name,
             'price' => $this->price,
             'description' => $this->description,
-            'user_id' => Auth::user()->id
+            'user_id' => Auth::user()->id,
         ]);
 
         $this->reset();
-        session()->flash('message', 'success');
+        session()->flash('message', 'Annuncio caricato con successo');
     }
 
     public function render()
