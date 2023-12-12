@@ -11,12 +11,16 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" id="categoriesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" id="categoriesDropdown"
+                        data-bs-toggle="dropdown" aria-expanded="false">
                         Categorie
                     </a>
+
                     <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
                         @foreach ($categories as $category)
-                            <li><a class="dropdown-item" href="{{route('categoryShow', compact('category'))}}">{{$category->name}}</a></li>
+                            <li><a class="dropdown-item"
+                                    href="{{ route('categoryShow', compact('category')) }}">{{ $category->name }}</a>
+                            </li>
                         @endforeach
                     </ul>
                 </li>
@@ -25,6 +29,18 @@
                     <li class="nav-item">
                         <a href ="{{ route('newAnnouncements') }}" class="nav-link">Crea Annuncio</a>
                     </li>
+                    @if (Auth::user()->is_revisor)
+                        <li class = "nav-item">
+                            <a class="nav-link btn btn-outline-success position-relative"
+                                href="{{ route('revisorIndex') }}">Zona Revisore</a>
+                            <span class = "postion-absolute top-0 start-100 translate-middle-badge rounded-pill bg-danger">
+                                {{ App\Models\Announcement::toBeRevisionedCount() }}
+                                <span class="visually-hidden"> unread message</span>
+                            </span>
+
+                        </li>
+                    @endif
+
                 @endauth
             </ul>
             <form class="d-flex" role="search">
