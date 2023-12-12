@@ -1,6 +1,11 @@
 <x-layout>
     <x-main />
     <div class = "container">
+        @if (session()->has('access.denied'))
+            <div class="alert alert-danger">
+                {{ session('access.denied') }}
+            </div>
+        @endif
         <div class="row">
             @foreach ($announcements as $announcement)
                 <div class="card m-5" style="width: 18rem;">
@@ -16,6 +21,7 @@
                     </div>
                 </div>
             @endforeach
+
 
         </div>
     </div>
