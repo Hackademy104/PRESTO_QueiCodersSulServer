@@ -10,7 +10,8 @@ Louis George Cafe per paragrafi e testo normale
 :root{
     --Color-G: rgb(69, 60, 57);
     --Color-B: rgb(92, 36, 20);
-    --color-N: #886c52
+    --color-N: rgb(137, 109, 82);
+    --color-W: rgb(216, 220, 225);
 
 }
 
@@ -29,20 +30,20 @@ Louis George Cafe per paragrafi e testo normale
 
 
 body{
-    background-color: rgb(236, 238, 243);
+    background-color: rgb(216, 220, 225);
     height: 4000px;
 }
 /* Nav */
 nav{
     position: sticky;
     top: 0;
-    background-color: var(--color-N);
+    background-color: rgb(216, 220, 225);
     z-index: 999;
     margin-bottom: 20px;
 }
 /* Header custom */
 .box-header{
-    background-color: var(--color-N);
+    background-color: rgb(216, 220, 225);
     box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.16);
 }
 #header-custom{
