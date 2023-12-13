@@ -1,7 +1,7 @@
 <x-layout>
 
-    <div class = "container">
-        <div class="row">
+    <div class = "container-fluid">
+        <div class="row justify-content-center">
             @forelse ($category->announcements as $announcement)
                 <div class="card m-5" style="width: 18rem;">
                     <img src="https://picsum.photos/300" class="card-img-top" alt="...">

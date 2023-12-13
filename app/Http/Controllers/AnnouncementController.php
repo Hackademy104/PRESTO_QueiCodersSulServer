@@ -22,7 +22,7 @@ class AnnouncementController extends Controller
     public function showAnnouncement(Announcement $announcement)
     {
 
-        return view('annunci.showAnnouncement', compact('announcements'));
+        return view('annunci.showAnnouncement', compact('announcement'));
     }
 
     public function indexAnnouncement()
