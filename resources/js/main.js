@@ -21,24 +21,44 @@ window.addEventListener("scroll", () => {
 }) */
 
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     var alertMessages = document.querySelectorAll('.alert-success.fade-out');
-    
+
     function hideMessage(alertMessage) {
         alertMessage.style.transition = "opacity 1s";
         alertMessage.style.opacity = 0;
-        setTimeout(function() {
+        setTimeout(function () {
             alertMessage.remove();
         }, 1000);
     }
 
-    alertMessages.forEach(function(alertMessage) {
-        document.getElementById('submitBtn').addEventListener('click', function() {
+    alertMessages.forEach(function (alertMessage) {
+        document.getElementById('submitBtn').addEventListener('click', function () {
             hideMessage(alertMessage);
         });
 
-        setTimeout(function() {
+        setTimeout(function () {
             hideMessage(alertMessage);
         }, 10000); // 10000 millisecondi = 10 secondi
     });
+});
+
+var swiper = new Swiper(".mySwiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    spaceBetween: 10,
+    coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    initialSlide: 4,
 });

@@ -7,7 +7,7 @@ Louis George Cafe per paragrafi e testo normale
 #5c2414 colore principale
 #b3b6b8 colore sfondo
 #453c39 colore testo */
-:root{
+:root {
     --Color-G: rgb(69, 60, 57);
     --Color-B: rgb(92, 36, 20);
     --color-N: rgb(137, 109, 82);
@@ -15,60 +15,57 @@ Louis George Cafe per paragrafi e testo normale
 
 }
 
-.text-G{
+.text-G {
     color: var(--Color-G);
 }
-.tect-B{
+
+.tect-B {
     color: var(--Color-B);
 }
 
 
-.logo-img{
+.logo-img {
     max-width: 150px;
 }
 
 
 
-body{
+body {
     background-color: rgb(216, 220, 225);
 }
+
 /* Nav */
-nav{
+nav {
     position: sticky;
     top: 0;
     background-color: rgb(216, 220, 225);
     z-index: 999;
     margin-bottom: 20px;
 }
+
 /* Header custom */
-.box-header{
+.box-header {
     background-color: rgb(216, 220, 225);
     box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.16);
 }
-#header-custom{
+
+#header-custom {
     border-bottom: 1px solid rgba(128, 128, 128, 0.607);
 }
 
-.main-custom{
-    background: linear-gradient(180deg , white , #c67f7f50 , #ececec56); 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 70vh;
-    width: 100%;
-}
 /* SEZIONE REGISTRATI/LOGIN/LOGOUT */
 .logo-register {
     margin-right: 15px;
     color: rgb(69, 60, 57);
 }
 
-.register{
+.register {
     text-decoration: none;
     color: rgb(69, 60, 57);
     font-family: 'Kalnia', serif;
 }
-.register:hover{
+
+.register:hover {
     font-weight: bold;
     color: rgb(92, 36, 20);
 }
@@ -77,43 +74,50 @@ nav{
     margin-right: 15px;
     color: rgb(69, 60, 57);
 }
-.login{
+
+.login {
     text-decoration: none;
     color: rgb(69, 60, 57);
     font-family: 'Kalnia', serif;
 }
-.login:hover{
+
+.login:hover {
     font-weight: bold;
     color: rgb(92, 36, 20);
 }
 
-.btn{
+.btn {
     border: none;
     color: white;
     max-width: max-content;
     background-color: rgb(69, 60, 57);
 }
-.btn:hover{
+
+.btn:hover {
     color: white;
     background-color: rgb(92, 36, 20);
 }
-.dropdown-menu{
+
+.dropdown-menu {
     background-color: rgb(92, 36, 20);
 }
-.dropdown-item{
+
+.dropdown-item {
     color: white;
     background-color: rgb(92, 36, 20);
 }
-.dropdown-item:hover{
+
+.dropdown-item:hover {
     background-color: transparent;
     font-weight: bold;
     color: white;
 }
+
 /* FINE SEZIONE REGISTRATI/LOGIN/LOGOUT */
 
 /* SEZIONE HEADER HOMEPAGE */
 
-.img-carousel{
+.img-carousel {
     height: 500px;
     object-fit: cover;
 }
@@ -124,7 +128,7 @@ nav{
     width: 100%;
     margin: 0px;
     margin-top: -18px;
-    
+
 }
 
 /* PAGIINA ANNUNCI */
@@ -136,4 +140,58 @@ nav{
 .page-item {
     margin-left: 10px;
     background-color: rgb(236, 238, 243);
+}
+
+/* SWIPER */
+
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    box-shadow: 0px 8px 8px rgba(32, 32, 32, 0.3);
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 8px 8px 8px rgba(32, 32, 32, 0.3);
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    
+}
+.icon-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.swiper-slide:hover .dark-overlay {
+    opacity: 1;
+}
+.swiper-slide:hover .icon-container {
+    opacity: 1;
+}
+
+.dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Opacità 0.5 per uno sfondo scuro */
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
