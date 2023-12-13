@@ -36,8 +36,8 @@ class Announcement extends Model
         $category = $this->category;
         $array = [
             'id' => $this->id,
-            'title' => $this->title,
-            'body' => $this->body,
+            'title' => $this->name,
+            'body' => $this->description,
             'category' => $category,
         ];
         return $array;
