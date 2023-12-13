@@ -49,6 +49,15 @@ nav{
 #header-custom{
     border-bottom: 1px solid rgba(128, 128, 128, 0.607);
 }
+
+.main-custom{
+    background: linear-gradient(180deg , white , #c67f7f50 , #ececec56); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    width: 100%;
+}
 /* SEZIONE REGISTRATI/LOGIN/LOGOUT */
 .logo-register {
     margin-right: 15px;

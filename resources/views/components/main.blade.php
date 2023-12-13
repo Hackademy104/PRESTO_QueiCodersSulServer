@@ -1,6 +1,6 @@
 
 
-<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+<div id="carouselExampleAutoplaying" class="carousel slide main-custom" data-bs-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active" data-bs-interval="">
             <img src="/media/singer.jpg" class="d-block w-100 img-carousel" alt="...">
