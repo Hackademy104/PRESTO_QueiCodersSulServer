@@ -6,7 +6,7 @@
                 {{ session('access.denied') }}
             </div>
         @endif
-        <div class="row">
+        <div class="row justify-content-center">
             @foreach ($announcements as $announcement)
                 <div class="card m-5" style="width: 18rem;">
                     <img src="https://picsum.photos/300" class="card-img-top" alt="...">
@@ -15,7 +15,6 @@
                         <p class="card-text">{{ $announcement->price }} $</p>
                         <p class="card-text">{{ $announcement->category->name }}</p>
                         <p class="card-text">{{ $announcement->description }}</p>
-
                         <a href="{{ route('showAnnouncement', compact('announcement')) }}" class="btn btn-primary">Vedi
                             di più</a>
                     </div>
