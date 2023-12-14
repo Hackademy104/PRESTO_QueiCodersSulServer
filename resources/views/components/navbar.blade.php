@@ -24,8 +24,9 @@
                         @endforeach
                     </ul>
                 </li>
+                
                 <li class="nav-item">
-                    <a class = "nav-link" href="{{ route('becomeRevisor') }}">Diventa Revisore</a>
+                    <a class = "nav-link" href="{{ route('diventaRevisore') }}">Diventa Revisore</a>
                 </li>
 
                 @auth
