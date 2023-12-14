@@ -7,5 +7,4 @@
         <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
     </ul>
     <p class="text-center text-muted">© 2022 Company, Inc</p>
-    <a class = "btn btn-warning text-light shadow my-3" href="{{ route('becomeRevisor') }}">Diventa Revisore</a>
 </footer>
