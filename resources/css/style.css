@@ -44,6 +44,15 @@ nav {
 }
 
 /* Header custom */
+
+.flags{
+    width: 30px;
+    height: 30px;
+    border: none;
+    padding: none;
+    background-color: transparent;
+}
+
 .box-header {
     background-color: rgb(216, 220, 225);
     box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.16);

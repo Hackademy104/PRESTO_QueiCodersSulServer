@@ -1,4 +1,10 @@
 <x-layout>
+    <div class=" d-flex justify-content-center">
+        <h1 class="display-1">{{ __('ui.welcome') }}</h1>
+    </div>
+    <div class=" d-flex justify-content-center">
+        <p>{{ __('ui.browseCategories') }}</p>
+    </div>
     <x-main />
     <div class = "container">
         @if (session()->has('access.denied'))

@@ -1,8 +1,13 @@
 <div class="container-fluid d-flex gap-2 flex-column box-header px-5  z-1 top-0">
 
     <div id = "header-custom" class="row justify-content-between ">
-        <div class="col-3">
-            {{-- inserimento bandiere per cambiamento linguaggio --}}
+        <div class="col-3 d-flex flex-column justify-content-center align-items-end">
+            <div>
+                <x-_locale lang="en"/>
+                <x-_locale lang="it"/>
+                <x-_locale lang="es"/>
+            </div>
+
         </div>
         <div class="col-6 d-flex justify-content-center">
             <a href="{{ route('welcome') }}">

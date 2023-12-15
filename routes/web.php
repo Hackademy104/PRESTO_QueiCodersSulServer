@@ -34,3 +34,7 @@ Route::patch('/rifiuta/annuncio/{announcement}', [RevisorController::class, 'rej
 Route::post('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('becomeRevisor');
 Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->middleware('auth')->name('makeRevisor');
 
+
+// Rotte cambio lingua
+
+Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('set_language_locale');
