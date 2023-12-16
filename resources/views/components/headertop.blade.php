@@ -14,7 +14,7 @@
                 <img class="logo-img" src="/media/PRESTO.png" alt="img">
             </a>
         </div>
-        <div class="col-3 d-flex flex-column justify-content-center gap-2">
+        <div class=" col-3 d-flex flex-column justify-content-center gap-2">
             @guest
                 <div>
                     <a class="register" href="/register"><i
@@ -27,7 +27,7 @@
 
             @auth
                 <div class="btn-group dropdown">
-                    <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button type="button" class="btn buttonCustom dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                         {{__('ui.greeting')}} {{ Auth::user()->name }}
                     </button>
                     <ul class="dropdown-menu">

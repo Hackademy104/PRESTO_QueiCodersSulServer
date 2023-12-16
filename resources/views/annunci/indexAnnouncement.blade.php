@@ -8,10 +8,12 @@
                         <h5 class="card-title">{{ $announcement->name }}</h5>
                         <p class="card-text">{{ $announcement->price }} $</p>
                         <p class="card-text">{{ $announcement->description }}</p>
-                        <a class="my-2 border-top pt-2 border-dark card-link btn btn-success"
+                        <a class="my-2 border-top pt-2 border-dark card-link btn buttonCustom"
                             href="{{ route('categoryShow', ['category' => $announcement->category]) }}">{{__('ui.categories')}}:
                             {{ $announcement->category->name }} </a>
                         <p class="card-footer">{{__('ui.user_name')}} {{ $announcement->user->name ?? '' }}</p>
+                        <a href="{{route('showAnnouncement', compact('announcement'))}}" class="btn buttonCustom">{{__('ui.show_more')}}</a>
+
                     </div>
                 </div>
                 @empty
@@ -27,9 +29,6 @@
 
         {{ $announcements->links() }}
     </div>
-    <div class="d-flex flex-wrap">
 
-
-    </div>
 
 </x-layout>

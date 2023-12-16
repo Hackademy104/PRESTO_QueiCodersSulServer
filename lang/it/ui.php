@@ -58,4 +58,6 @@ return [
     'camera' => 'Fotocamera',
     //Traduzione logica creazione annuncio
     'announcement_success' => 'Annuncio caricato correttamente',
+
+
 ];

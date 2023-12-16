@@ -2,6 +2,7 @@
 
     <div class = "container-fluid">
         <div class="row justify-content-center">
+            <h1></h1>
             @forelse ($category->announcements as $announcement)
                 <div class="card m-5" style="width: 18rem;">
                     <img src="https://picsum.photos/300" class="card-img-top" alt="...">
@@ -17,7 +18,7 @@
                 @empty 
                     <div class="col-12">
                         <p>{{__('ui.isNot_announcementCategory')}}</p>
-                        <p>{{__('ui.public_one')}} <a class="btn btn-primary" href="{{route('newAnnouncements')}}">{{__('ui.create_announcement')}}</a></p>
+                        <p>{{__('ui.public_one')}} <a class="btn buttonCustom" href="{{route('newAnnouncements')}}">{{__('ui.create_announcement')}}</a></p>
                     </div>
                 @endforelse
 

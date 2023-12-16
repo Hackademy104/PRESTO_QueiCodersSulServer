@@ -16,6 +16,7 @@ class AnnouncementController extends Controller
 
     public function categoryShow(Category $category)
     {
+        
         return view('annunci.categoryShow', compact('category'));
     }
 

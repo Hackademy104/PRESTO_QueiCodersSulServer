@@ -43,6 +43,8 @@ nav {
     margin-bottom: 20px;
 }
 
+
+
 /* Header custom */
 
 .flags{
@@ -58,9 +60,7 @@ nav {
     box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.16);
 }
 
-#header-custom {
-    border-bottom: 1px solid rgba(128, 128, 128, 0.607);
-}
+
 
 /* SEZIONE REGISTRATI/LOGIN/LOGOUT */
 .logo-register {
@@ -99,11 +99,17 @@ nav {
     border: none;
     color: white;
     max-width: max-content;
-    background-color: rgb(69, 60, 57);
 }
 
 .btn:hover {
     color: white;
+    opacity: 0.9;
+}
+
+.buttonCustom {
+    background-color: rgb(92, 36, 20);
+}
+.buttonCustom:hover {
     background-color: rgb(92, 36, 20);
 }
 
