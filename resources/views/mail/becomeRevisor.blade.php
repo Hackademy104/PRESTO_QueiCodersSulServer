@@ -1,12 +1,12 @@
 
     <div class="container">
         <div class="row">
-            <h1>Un utente vuole lavorare con noi</h1>
-            <h2>Ecco i dati</h2>
-            <p>Nome: {{ $user->name }}</p>
-            <p>Email: {{ $user->email }}</p>
-            <p>Motivazione: {{$motivation}}</p>
-            <p>Se vuoi renderlo revisore clicca qui: </p>
-            <a href="{{ route('makeRevisor', compact('user')) }}">Rendi revisore</a>
+            <h1>{{__('ui.request')}}</h1>
+            <h2>{{__('ui.datas')}}</h2>
+            <p>{{__('ui.auditor_name')}} {{ $user->name }}</p>
+            <p>{{__('ui.auditor_email')}} {{ $user->email }}</p>
+            <p>{{__('ui.auditor_motivation')}} {{$motivation}}</p>
+            <p>{{__('ui.auditor_hiring')}} </p>
+            <a href="{{ route('makeRevisor', compact('user')) }}">{{__('ui.make_auditor')}}</a>
         </div>
     </div>

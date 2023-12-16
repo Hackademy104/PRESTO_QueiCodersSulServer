@@ -18,27 +18,27 @@
             @guest
                 <div>
                     <a class="register" href="/register"><i
-                            class="fa-regular fa-user fa-lg logo-register"></i>Registrati</a>
+                            class="fa-regular fa-user fa-lg logo-register"></i>{{__('ui.register')}}</a>
                 </div>
                 <div>
-                    <a class="login" href="/login"><i class="fa-solid fa-user fa-lg logo-login"></i>Login</a>
+                    <a class="login" href="/login"><i class="fa-solid fa-user fa-lg logo-login"></i>{{__('ui.login')}}</a>
                 </div>
             @endguest
 
             @auth
                 <div class="btn-group dropdown">
                     <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        Ciao {{ Auth::user()->name }}
+                        {{__('ui.greeting')}} {{ Auth::user()->name }}
                     </button>
                     <ul class="dropdown-menu">
                         <li class="dropdown-item">
                             <form method="POST" action="/logout">
                                 @csrf
-                                <button type="submit" class="nav-link">Logout</button>
+                                <button type="submit" class="nav-link">{{__('ui.logout')}}</button>
                             </form>
                         </li>
                         <li class="dropdown-item">
-                            <a class="nav-link" href="">Profilo</a>
+                            <a class="nav-link" href="">{{__('ui.profile')}}</a>
                         </li>
                     </ul>
                 </div>

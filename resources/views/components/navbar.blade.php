@@ -7,13 +7,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('indexAnnouncement') }}">Annunci</a>
+                    <a class="nav-link" href="{{ route('indexAnnouncement') }}">{{__('ui.announcements')}}</a>
                 </li>
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" id="categoriesDropdown"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        Categorie
+                        {{__('ui.categories')}}
                     </a>
 
                     <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
@@ -26,20 +26,20 @@
                 </li>
                 
                 <li class="nav-item">
-                    <a class = "nav-link" href="{{ route('diventaRevisore') }}">Diventa Revisore</a>
+                    <a class = "nav-link" href="{{ route('diventaRevisore') }}">{{__('ui.auditor')}}</a>
                 </li>
 
                 @auth
                     <li class="nav-item">
-                        <a href ="{{ route('newAnnouncements') }}" class="nav-link">Crea Annuncio</a>
+                        <a href ="{{ route('newAnnouncements') }}" class="nav-link">{{__('ui.create_announcement')}}</a>
                     </li>
                     @if (Auth::user()->is_revisor)
                         <li class = "nav-item">
                             <a class="nav-link btn btn-outline-success position-relative"
-                                href="{{ route('revisorIndex') }}">Zona Revisore</a>
+                                href="{{ route('revisorIndex') }}">{{__('Auditor_Zone')}}</a>
                             <span class = "postion-absolute top-0 start-100 translate-middle-badge rounded-pill bg-danger">
                                 {{ App\Models\Announcement::toBeRevisionedCount() }}
-                                <span class="visually-hidden"> unread message</span>
+                                <span class="visually-hidden">{{__('ui.Unread_Message')}}</span>
                             </span>
 
                         </li>
@@ -48,8 +48,8 @@
                 @endauth
             </ul>
             <form class="d-flex" action="{{route('searchAnnouncements')}}" method="GET">
-                <input name='searched' class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <input name='searched' class="form-control me-2" type="search" placeholder={{__('ui.search')}} aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">{{__('ui.search')}}</button>
             </form>
         </div>
     </div>

@@ -2,7 +2,7 @@
     <div class = "container-fluid p-5 bg-gradient bg-succes shadow mb-4">
         <div class ="row">
             <h1 class = "display-2">
-                {{ $announcement_to_check ? 'Ecco l\' annuncio da revisionare' : 'Non ci sono annunci da revisionare' }}
+                {{ $announcement_to_check ? {{__('ui.is_announcement')}} : {{__('ui.isnot_announcement')}} }}
             </h1>
 
         </div>
@@ -30,18 +30,18 @@
                     <button class="carousel-control-prev" type="button" data-bs-target="#showCarousel"
                         data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
+                        <span class="visually-hidden">{{__('ui.previous')}}</span>
                     </button>
                     <button class="carousel-control-next" type="button" data-bs-target="#showCarousel"
                         data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
+                        <span class="visually-hidden">{{__('ui.next')}}</span>
                     </button>
                 </div>
 
 
-                <h5 class = "card-title">Titolo: {{ $announcement_to_check->title }}</h5>
-                <p class="card-text">Descrizione: {{ $announcement_to_check->description }} $</p>
+                <h5 class = "card-title">{{__('ui.title')}} {{ $announcement_to_check->title }}</h5>
+                <p class="card-text">{{__('ui.description_announcement')}} {{ $announcement_to_check->description }} $</p>
             </div>
 
             <div class =  "row">
@@ -50,7 +50,7 @@
                         method="POST">
                         @csrf
                         @method('PATCH')
-                        <button type = "submit" class = "btn btn-success shadow">Accetta</button>
+                        <button type = "submit" class = "btn btn-success shadow">{{__('ui.accept_announcement')}}</button>
 
                     </form>
                 </div>
@@ -59,7 +59,7 @@
                         method = "POST">
                         @csrf
                         @method('PATCH')
-                        <button type = "submit" class = "btn btn-danger shadow">Rifiuta</button>
+                        <button type = "submit" class = "btn btn-danger shadow">{{__('ui.refuse_announcement')}}</button>
 
                     </form>
                 </div>
