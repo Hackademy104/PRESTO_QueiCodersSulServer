@@ -2,11 +2,15 @@
 
 namespace App\Livewire;
 
-use Livewire\Component;
+use App\Jobs\ResizeImage;
 use App\Models\Category;
-use Livewire\WithFileUploads;
-use Livewire\Attributes\Validate;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
+use Livewire\Attributes\Validate;
+use Livewire\Component;
+use Livewire\WithFileUploads;
+
+use function Livewire\store;
 
 class FormCaricaAnnunci extends Component
 {
@@ -19,8 +23,11 @@ class FormCaricaAnnunci extends Component
     public $category;
 
     public $temporary_images;
+
     public $images = [];
+
     public $image;
+
     public $user_id;
 
     #[Validate('required')]
@@ -28,6 +35,10 @@ class FormCaricaAnnunci extends Component
 
     #[Validate('required')]
     public $description;
+
+    public $announcement;
+
+    public $form_id;
 
     protected $rules = [
         'name' => 'required|string|max:255',
@@ -45,18 +56,20 @@ class FormCaricaAnnunci extends Component
         'temporary_images.*.max' => 'L\'immagine deve essere max di 1 MB',
     ];
 
-    public function updatedTemporaryImages(){
+    public function updatedTemporaryImages()
+    {
         if ($this->validate([
             'temporary_images.*' => 'image|max:1024',
         ])) {
-            foreach ($this->temporary_images as $image){
+            foreach ($this->temporary_images as $image) {
                 $this->images[] = $image;
             }
         }
     }
 
-    public function removeImage($key){
-        if(in_array($key, array_keys($this->images))){
+    public function removeImage($key)
+    {
+        if (in_array($key, array_keys($this->images))) {
             unset($this->images[$key]);
         }
     }
@@ -71,20 +84,22 @@ class FormCaricaAnnunci extends Component
         $this->user_id = Auth::user()->id;
         $this->validate();
         $this->announcement = Category::find($this->category)->announcements()->create($this->validate());
-        if(count($this->images)){
-            foreach($this->images as $image){
-                $this->announcement->images()->create(['path'=>$image->store('images', 'public')]);
-            }
+        if (count($this->images)) {
+            foreach ($this->images as $image) {
+                // $this->announcement->images()->create(['path' => $image->store('images', 'public')]);
+                $newFileName = "announcements/{$this->announcement->id}";
+                $newImage = $this->announcement->images()->create(['path' => $image->store($newFileName, 'public')]);
+            }   dispatch(new ResizeImage($newImage->path, 300, 300));
 
         }
-
-
+        File::deleteDirectory(storage_path('/app/livewire-tmp'));
         $this->reset();
         session()->flash('message', 'Annuncio caricato con successo, in revisione');
         $this->cleanForm();
     }
 
-    public function cleanForm(){
+    public function cleanForm()
+    {
         $this->name = '';
         $this->price = '';
         $this->description = '';
@@ -92,7 +107,6 @@ class FormCaricaAnnunci extends Component
         $this->images = [];
         $this->temporary_images = [];
         $this->form_id = rand();
-
 
     }
 
