@@ -21,7 +21,7 @@
                         @foreach ($categories as $category)
                             <li>
                                 <a class="dropdown-item"
-                                    href="{{ route('categoryShow', compact('category')) }}">{{ $category->name }}
+                                    href="{{ route('categoryShow', compact('category')) }}">{{__("ui.$category->name")  }}
                                 </a>
                             </li>
                         @endforeach

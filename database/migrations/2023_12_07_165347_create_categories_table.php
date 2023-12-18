@@ -21,11 +21,11 @@ return new class extends Migration
 
         $categories = [
             'Fotocamere',
-            'FrancoBolli',
+            'Francobolli',
             'Lampadari',
             'Libri',
             'Mobili',
-            'Monete ',
+            'Monete',
             'Quadri',
             'Utensili',
             'Vasi',

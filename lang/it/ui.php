@@ -58,6 +58,14 @@ return [
     'camera' => 'Fotocamera',
     //Traduzione logica creazione annuncio
     'announcement_success' => 'Annuncio caricato correttamente',
-
-
+    'Fotocamere' => 'Fotocamere',
+    'Francobolli' => 'Francobolli',
+    'Lampadari' => 'Lampadari',
+    'Libri' => 'Libri',
+    'Mobili' => 'Mobili',
+    'Monete' => 'Monete',
+    'Quadri' => 'Quadri',
+    'Utensili' => 'Utensili',
+    'Vasi' => 'Vasi',
+    'Vinili' => 'Vinili',
 ];

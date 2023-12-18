@@ -68,4 +68,14 @@ return [
     'isNot_announcement' => 'No hay anuncios para esta búsqueda.',
     //Traduzione logica creazione annuncio
     'announcement_success' => 'Anuncio cargado correctamente',
+    'Fotocamere' => 'Camaras',
+    'Francobolli' => 'Sellos',
+    'Lampadari' => 'Candelabros',
+    'Libri' => 'Libros',
+    'Mobili' => 'Movil',
+    'Monete' => 'Monetas',
+    'Quadri' => 'Pinturas',
+    'Utensili' => 'Herramientas',
+    'Vasi' => 'Jarrones',
+    'Vinili' => 'Vinilos',
 ];

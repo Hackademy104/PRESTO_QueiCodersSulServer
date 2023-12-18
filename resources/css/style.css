@@ -210,3 +210,19 @@ nav {
     opacity: 0;
     transition: opacity 0.3s ease;
 }
+
+.img-preview{
+    width: 200px;
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img-carousel{
+    width: 400px;
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

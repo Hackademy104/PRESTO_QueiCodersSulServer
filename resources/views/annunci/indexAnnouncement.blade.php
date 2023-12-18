@@ -4,7 +4,7 @@
                 @forelse ($announcements as $announcement)
                 <div class="card m-5" style="width: 18rem;">
                     <div class="card-body">
-                        <img src="https://picsum.photos/300" class="card-img-top" alt="Foto del prodotto">
+                        <img src="{{!$announcement->images()->get()->isEmpty() ? Storage::url($announcement->images()->first()->path) : 'https://picsum.photos/200'}}" class="card-img-top" alt="Foto del prodotto">
                         <h5 class="card-title">{{ $announcement->name }}</h5>
                         <p class="card-text">{{ $announcement->price }} $</p>
                         <p class="card-text">{{ $announcement->description }}</p>

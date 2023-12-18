@@ -68,5 +68,14 @@ return [
     'isNot_announcement' => 'There are no announcements for this search',
     //Traduzione logica creazione annuncio
     'announcement_success' => 'Announcement loaded successfully',
-
+    'Fotocamere' => 'Cameras',
+    'Francobolli' => 'Stamts',
+    'Lampadari' => 'Chandeliers',
+    'Libri' => 'Books',
+    'Mobili' => 'Mobile',
+    'Monete' => 'Coins',
+    'Quadri' => 'Paintings',
+    'Utensili' => 'Weapons',
+    'Vasi' => 'Pots',
+    'Vinili' => 'Vinyls',
 ];
