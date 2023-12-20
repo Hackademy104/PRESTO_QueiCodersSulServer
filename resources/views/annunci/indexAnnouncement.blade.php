@@ -7,9 +7,9 @@
                         <img src="{{ !$announcement->images()->get()->isEmpty()? $announcement->images()->first()->getUrl(300, 300): 'https://picsum.photos/200' }}"
                             class="card-img-top" alt="Foto del prodotto">
                         <h5 class="card-title">{{ $announcement->name }}</h5>
-                        <p class="card-text">{{ $announcement->price }} $</p>
+                        <p class="card-text">{{ $announcement->price }} €</p>
                         <p class="card-text">{{ $announcement->description }}</p>
-                        <a class="my-2 border-top pt-2 border-dark card-link btn buttonCustom"
+                        <a class="my-3 border-top pt-2 border-dark card-link"
                             href="{{ route('categoryShow', ['category' => $announcement->category]) }}">{{ __('ui.categories') }}:
                             {{ $announcement->category->name }} </a>
                         <p class="card-footer">{{ __('ui.user_name') }} {{ $announcement->user->name ?? '' }}</p>

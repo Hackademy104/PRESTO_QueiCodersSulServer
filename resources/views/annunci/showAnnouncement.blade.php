@@ -1,7 +1,7 @@
 <x-layout>
     <div class = "container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-4">
                 <div id="showCarousel" class="carousel slide" data-ride="carousel">
                     @if ($announcement->images)
                         <div class="carousel-inner img-carousel">

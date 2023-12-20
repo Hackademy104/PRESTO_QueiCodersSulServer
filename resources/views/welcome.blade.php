@@ -30,10 +30,10 @@
                         class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">{{ $announcement->name }}</h5>
-                        <p class="card-text">{{ $announcement->price }} $</p>
+                        <p class="card-text">{{ $announcement->price }} €</p>
                         <p class="card-text">{{ $announcement->category->name }}</p>
                         <p class="card-text">{{ $announcement->description }}</p>
-                        <a href="{{ route('showAnnouncement', compact('announcement')) }}" class="btn btn-primary">Vedi
+                        <a href="{{ route('showAnnouncement', compact('announcement')) }}" class="btn buttonCustom btn-primary">Vedi
                             di più</a>
                     </div>
                 </div>

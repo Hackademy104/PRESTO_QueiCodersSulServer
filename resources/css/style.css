@@ -279,3 +279,16 @@ footer{
     background-color: rgba(0, 0, 0, 0.345);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
+
+/* CARD CUSTOM */
+
+.card{
+    background-color: transparent;
+    border: 3px solid var(--Color-B);
+    box-shadow: 5px 5px 10px var(--Color-B);
+}
+
+.card-img-top{
+    border-bottom: 1px solid var(--Color-B);
+    margin-bottom: 20px;
+}
