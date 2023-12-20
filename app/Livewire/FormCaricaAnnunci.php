@@ -2,18 +2,18 @@
 
 namespace App\Livewire;
 
-use Livewire\Component;
-use App\Models\Category;
-use App\Jobs\RemoveFaces;
-use App\Jobs\ResizeImage;
-use function Livewire\store;
-use Livewire\WithFileUploads;
-use Livewire\Attributes\Validate;
-
 use App\Jobs\GoogleVisionLabelImage;
 use App\Jobs\GoogleVisionSafeSearch;
+use App\Jobs\RemoveFaces;
+use App\Jobs\ResizeImage;
+use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
+use Livewire\Attributes\Validate;
+use Livewire\Component;
+use Livewire\WithFileUploads;
+
+use function Livewire\store;
 
 class FormCaricaAnnunci extends Component
 {
@@ -98,8 +98,8 @@ class FormCaricaAnnunci extends Component
                     new GoogleVisionSafeSearch($newImage->id),
                     new GoogleVisionLabelImage($newImage->id),
                 ])->dispatch($newImage->id);
-                }
-                File::deleteDirectory(storage_path('/app/livewire-tmp'));
+            }
+            File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
         $this->reset();
         session()->flash('message', 'Annuncio caricato con successo, in revisione');

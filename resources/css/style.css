@@ -179,7 +179,7 @@ nav {
 .swiper-slide img {
     display: block;
     width: 100%;
-    
+
 }
 .icon-container {
     position: absolute;
@@ -225,4 +225,9 @@ nav {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+/* Footer */
+footer{
+    border-top: 1px solid var(--Color-G);
 }

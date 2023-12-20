@@ -15,7 +15,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-4">
-                    <div id="showCarousel" class="carousel slide" data-ride="carousel">
+                    <div id="showCarousel" class="carousel slide " data-ride="carousel">
                         @if ($announcement_to_check->images)
                             <div class="carousel-inner img-carousel">
                                 @foreach ($announcement_to_check->images as $image)
@@ -23,19 +23,20 @@
                                         <img class="img-fluid p-3 rounded" src="{{ $image->getUrl(300, 300) }}"
                                             alt="First slide">
                                     </div>
-                                    <div class="col-6">
-                                        <div class="card-body">
-                                            <h5 class="tc-accent">Revisione immagini</h5>
-                                            <p>Adulti: <span class="{{ $image->adult }}"></span></p>
-                                            <p>Satira: <span class="{{ $image->spoof }}"></span></p>
-                                            <p>Medicina: <span class="{{ $image->medical }}"></span></p>
-                                            <p>Violenza: <span class="{{ $image->violence }}"></span></p>
-                                            <p>Contenuto Ammiccante: <span class="{{ $image->racy }}"></span></p>
-                                        </div>
-                                    </div>
-                                @endforeach
+
                             </div>
-                        @else
+                            <div class="col-6 ">
+                                <div class="card-body">
+                                    <h5 class="tc-accent">Revisione immagini</h5>
+                                    <p>Adulti: <span class="{{ $image->adult }}"></span></p>
+                                    <p>Satira: <span class="{{ $image->spoof }}"></span></p>
+                                    <p>Medicina: <span class="{{ $image->medical }}"></span></p>
+                                    <p>Violenza: <span class="{{ $image->violence }}"></span></p>
+                                    <p>Contenuto Ammiccante: <span class="{{ $image->racy }}"></span></p>
+                                </div>
+                            </div>
+                        @endforeach
+                    @else
                     </div>
     @endif
     <button class="carousel-control-prev" type="button" data-bs-target="#showCarousel" data-bs-slide="prev">
