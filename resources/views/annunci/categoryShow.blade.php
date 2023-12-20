@@ -5,7 +5,7 @@
             <h1></h1>
             @forelse ($category->announcements as $announcement)
                 <div class="card m-5" style="width: 18rem;">
-                    <img src="https://picsum.photos/300" class="card-img-top" alt="...">
+                    <img src="{{ !$announcement->images()->get()->isEmpty()? $announcement->images()->first()->getUrl(300, 300): 'https://picsum.photos/200' }}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">{{ $announcement->name }}</h5>
                         <p class="card-text">{{ $announcement->price }}</p>

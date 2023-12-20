@@ -23,29 +23,21 @@
                                         <img class="img-fluid p-3 rounded" src="{{ $image->getUrl(300, 300) }}"
                                             alt="First slide">
                                     </div>
+                                    <div class="col-6">
+                                        <div class="card-body">
+                                            <h5 class="tc-accent">Revisione immagini</h5>
+                                            <p>Adulti: <span class="{{ $image->adult }}"></span></p>
+                                            <p>Satira: <span class="{{ $image->spoof }}"></span></p>
+                                            <p>Medicina: <span class="{{ $image->medical }}"></span></p>
+                                            <p>Violenza: <span class="{{ $image->violence }}"></span></p>
+                                            <p>Contenuto Ammiccante: <span class="{{ $image->racy }}"></span></p>
+                                        </div>
+                                    </div>
                                 @endforeach
                             </div>
                         @else
-                            {{-- <div class="carousel-item">
-                                <img class="img-fluid p-3 rounded" src="https://picsum.photos/id/28/1200/200"
-                                    alt="Second slide">
-                            </div>
-                            <div class="carousel-item">
-                                <img class="img-fluid p-3 rounded" src="https://picsum.photos/id/29/1200/200"
-                                    alt="Third slide">
-                            </div> --}}
-                </div>
-                @endif
-                <div class="col-6">
-                    <div class="card-body">
-                        <h5 class="tc-accent">Revisione immagini</h5>
-                        <p>Adulti: <span class="{{$image->adult}}"></span></p>
-                        <p>Satira: <span class="{{$image->spoof}}"></span></p>
-                        <p>Medicina: <span class="{{$image->medical}}"></span></p>
-                        <p>Violenza: <span class="{{$image->violence}}"></span></p>
-                        <p>Contenuto Ammiccante: <span class="{{$image->racy}}"></span></p>
                     </div>
-                </div>
+    @endif
     <button class="carousel-control-prev" type="button" data-bs-target="#showCarousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">{{ __('ui.previous') }}</span>
@@ -65,7 +57,8 @@
 
     <div class="row">
         <div class="col-12 col-md-6">
-            <form action="{{ route('acceptAnnouncement', ['announcement' => $announcement_to_check]) }}" method="POST">
+            <form action="{{ route('acceptAnnouncement', ['announcement' => $announcement_to_check]) }}"
+                method="POST">
                 @csrf
                 @method('PATCH')
                 <button type="submit" class="btn btn-success shadow">{{ __('ui.accept_announcement') }}</button>
