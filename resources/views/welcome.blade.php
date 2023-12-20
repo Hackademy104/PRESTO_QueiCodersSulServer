@@ -1,8 +1,19 @@
 <x-layout>
-    <div class=" d-flex justify-content-center">
-        <h1 class="display-1">{{ __('ui.welcome') }}</h1>
+    <div class="video_welcome">
+        <div class="container-fluid container-video h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12 text-center">
+                    <h1 class="titolo-welcome text-white display-1">{{ __('ui.welcome') }}</h1>
+                </div>
+            </div>
+        </div>
+        <video id="video-background" autoplay muted loop>
+            <source src="{{ asset('media/video_presto.mp4') }}" type="video/mp4">
+            Il tuo browser non supporta la riproduzione di video.
+        </video>
     </div>
-    <div class=" d-flex justify-content-center">
+
+    <div class="mt-5 display-5 d-flex justify-content-center">
         <p>{{ __('ui.browseCategories') }}</p>
     </div>
     <x-main />
