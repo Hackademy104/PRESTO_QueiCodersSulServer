@@ -16,9 +16,12 @@ Louis George Cafe per paragrafi e testo normale
     src: url(./fonts/Louis\ George\ Cafe.ttf);
 }
 
-h1,h2{
+.FontDirty {
     font-family: DirtyCrown;
+
 }
+
+
 h3,h4,h5,p,span{
     font-family: LouisGeorge;
 }
@@ -40,6 +43,10 @@ h3,h4,h5,p,span{
 
 .text-B {
     color: var(--Color-B);
+}
+
+.bg-G {
+    background-color: var(--color-W);
 }
 
 
@@ -155,7 +162,7 @@ nav {
     margin-top: 100px;
 }
 .img-carousel {
-    height: 500px;
+    height: 360px !important; 
     object-fit: cover;
 }
 
@@ -170,14 +177,16 @@ nav {
 
 /* PAGIINA ANNUNCI */
 
-.pagination {
-    background-color: rgb(236, 238, 243);
-}
+
 
 .page-item {
     margin-left: 10px;
-    background-color: rgb(236, 238, 243);
 }
+
+
+
+
+
 
 /* SWIPER */
 
@@ -267,7 +276,6 @@ footer{
 }
 
 .video_welcome{
-    margin-top: 50px;
     position: relative;
     height: 80vh;
 }
@@ -291,4 +299,21 @@ footer{
 .card-img-top{
     border-bottom: 1px solid var(--Color-B);
     margin-bottom: 20px;
+}
+
+.buttonPrevious {
+    margin-right: 30px;
+    width: 30px;
+    background-color: var(--Color-B);
+}
+
+.buttonNext {
+    margin-left: 30px;
+    width: 30px;
+    background-color: var(--Color-B);
+}
+
+.ms-custom {
+    margin-left: 130px;
+    margin-top: 30px;
 }

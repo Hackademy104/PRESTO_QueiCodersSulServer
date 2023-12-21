@@ -11,7 +11,7 @@ return [
     //Traduzioni navbar
     'announcements' => 'Anuncios',
     'categories' => 'Categorias',
-    'auditor' => 'Convertirse en auditor', //Traduzione : "Diventa un revisore"
+    'auditor' => 'trabaja con nosotros', //Traduzione : "Diventa un revisore"
     'create_announcement' => 'Crear anuncio',
     'search' => 'Busca',
     'Auditor_Zone' => 'Área de auditores', //Traduzione : "Zona Revisore" 
@@ -43,7 +43,7 @@ return [
     'auditor_description' => 'Podrás aceptar o rechazar anuncios creados por usuarios.',
     'insert_name' => 'Inserta tu nombre :',
     'auditor_reason' => '¿Por qué quieres convertirte en auditor?',
-    'button_becomeAuditor' => 'Solicite convertirse en revisor',
+    'button_becomeAuditor' => 'enviar',
     //Traduzione annunci da revisionare
     'is_announcement' => 'Aquí están todos los anuncios para revisar',
     'isnot_announcement' => 'No hay anuncios para revisar',
@@ -78,4 +78,15 @@ return [
     'Utensili' => 'Herramientas',
     'Vasi' => 'Jarrones',
     'Vinili' => 'Vinilos',
+
+    'price' => 'Precio:',
+    'Delete' => 'eliminar',
+    'Message' => 'Anuncio subido correctamente, en revisión',
+    'Adulti' => 'Adultos:',
+    'Satira' => 'Sátira:',
+    'Medicina' => 'Medicina:',
+    'Violenza' => 'Violencia:',
+    'Contenuto' => 'Contenido guiño:',
+    'message2' => 'Felicitaciones, ha solicitado convertirse en revisor.',
+
 ];

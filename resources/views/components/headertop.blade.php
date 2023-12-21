@@ -40,6 +40,19 @@
                         <li class="dropdown-item">
                             <a class="nav-link" href="">{{__('ui.profile')}}</a>
                         </li>
+                        @if (Auth::user()->is_revisor)
+                        <li class = "dropdown-item">
+                            <a class="nav-link btn"
+                            href="{{ route('revisorIndex') }}">{{__('ui.Auditor_Zone')}}
+                                        <span class="translate-middle badge rounded-pill bg-danger">
+                                            {{ App\Models\Announcement::toBeRevisionedCount() }}
+                                            <span class="visually-hidden">{{__('ui.Unread_Message')}}</span>
+                                        </span></a>
+        
+                                        
+                                        
+                                    </li>
+                            @endif
                     </ul>
                 </div>
             @endauth

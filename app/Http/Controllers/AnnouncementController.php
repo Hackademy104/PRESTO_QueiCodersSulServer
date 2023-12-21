@@ -11,6 +11,7 @@ class AnnouncementController extends Controller
     {
         $categories = Category::all();
 
+
         return view('annunci.newAnnouncements', compact('categories'));
     }
 
@@ -21,6 +22,7 @@ class AnnouncementController extends Controller
     }
 
     public function showAnnouncement(Announcement $announcement)
+
     {
 
         return view('annunci.showAnnouncement', compact('announcement'));
@@ -28,6 +30,8 @@ class AnnouncementController extends Controller
 
     public function indexAnnouncement()
     {
+        $categories = Category::all();
+
         $announcements = Announcement::where('is_accepted', true)->orderBy('created_at', 'desc')->paginate(6);
 
         return view('annunci.indexAnnouncement', compact('announcements'));

@@ -102,7 +102,8 @@ class FormCaricaAnnunci extends Component
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
         $this->reset();
-        session()->flash('message', 'Annuncio caricato con successo, in revisione');
+        session()->flash('message', __('ui.Message'));
+
         $this->cleanForm();
     }
 

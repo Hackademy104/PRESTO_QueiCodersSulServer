@@ -1,5 +1,5 @@
 <div class="h-100 d-flex flex-column align-items-center justify-content-center">
-    <div class="w-100">
+    <div class="w-100 mt-3">
         @if (session()->has('message'))
             <div class="alert alert-success">
                 {{ session('message') }}
@@ -7,7 +7,7 @@
         @endif
     </div>
 
-    <h2 class="display-2 text-center mt-5">{{__('ui.create_your_announcement')}}</h2>
+    <h2 class="display-2 text-center mt-4 mb-4">{{__('ui.create_your_announcement')}}</h2>
 
     {{-- Knowing others is intelligence; knowing yourself is true wisdom. --}}
     <form wire:submit.prevent="store" class="w-50" method="POST" wire:submit="store">
@@ -22,7 +22,7 @@
             <select wire:model='category' class="form-select" aria-label="Default select example">
                 <option selected>{{__('ui.category_list')}}</option>
                 @foreach ($categories as $category)
-                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                    <option value="{{ $category->id }}">{{__("ui.$category->name")  }}</option>
                 @endforeach
             </select>
         </div>
@@ -33,6 +33,7 @@
         </div>
 
         <div class="mb-3">
+            <label for="images">{{__('ui.InsertImages')}}</label>
             <input wire:model="temporary_images" type="file" name="images" multiple class="form-control shadow @error('temporary_images.*') is-invalid @enderror" placeholder="Img"/>
             @error ('temporary_images.*')
                 <p class="text-danger mt-2">{{$message}}</p>
@@ -42,11 +43,11 @@
             <div class="row">
                 <div class="col-12">
                     <p>Photo Preview:</p>
-                    <div class="row border border-4 border-info rounded shadow py-4">
+                    <div class="d-flex row border border-4 border-info rounded shadow py-4">
                         @foreach ($images as $key => $image)
                             <div class="col-12 my-3">
                                 <div class="img-preview mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}});"></div>
-                                <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">Cancella</button>
+                                <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">{{__('ui.Delete')}}</button>
                             </div>
                         @endforeach
                     </div>

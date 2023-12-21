@@ -2,19 +2,24 @@
 
     <div class = "container-fluid">
         <div class="row justify-content-center">
-            <h1></h1>
-            @forelse ($category->announcements as $announcement)
-                <div class="card m-5" style="width: 18rem;">
-                    <img src="{{ !$announcement->images()->get()->isEmpty()? $announcement->images()->first()->getUrl(300, 300): 'https://picsum.photos/200' }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ $announcement->name }}</h5>
-                        <p class="card-text">{{ $announcement->price }}</p>
-                        <p class="card-text">{{ $announcement->category->name }}</p>
-                        <p class="card-text">{{ $announcement->description }}</p>
+            <div class="d-flex w-100 justify-content-center">
 
-                        <a href="{{route('showAnnouncement', compact('announcement'))}}" class="btn btn-primary">{{__('ui.show_more')}}</a>
-                    </div>
+                <h1>{{__('ui.category')}}: {{__("ui.$category->name")  }}</h1>
+            </div>
+            @forelse ($category->announcements as $announcement)
+            <div class="card m-5" style="width: 18rem;">
+                <div class="card-body">
+                    <img src="{{ !$announcement->images()->get()->isEmpty()? $announcement->images()->first()->getUrl(300, 300): 'https://picsum.photos/200' }}"
+                        class="card-img-top" alt="Foto del prodotto">
+                    <h5 class="card-title">{{__('ui.title')}} {{ $announcement->name }}</h5>
+                    <p class="card-text">{{__('ui.price')}} {{ $announcement->price }} €</p>
+                    <p class="card-text">{{__('ui.description')}} {{ $announcement->description }}</p>
+                    <p class="">{{ __('ui.user_name') }} {{ $announcement->user->name ?? '' }}</p>
+                    <a href="{{ route('showAnnouncement', compact('announcement')) }}"
+                        class="btn buttonCustom">{{ __('ui.show_more') }}</a>
+
                 </div>
+            </div>
                 @empty 
                     <div class="col-12">
                         <p>{{__('ui.isNot_announcementCategory')}}</p>

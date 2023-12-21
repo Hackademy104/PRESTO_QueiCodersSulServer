@@ -11,7 +11,7 @@ return [
     //Traduzioni navbar
     'announcements' => 'Announcements',
     'categories' => 'Categories',
-    'auditor' => 'Become an auditor', //Traduzione : "Diventa un revisore"
+    'auditor' => 'work with us', //Traduzione : "Diventa un revisore"
     'create_announcement' => 'Create announcement',
     'search' => 'Search',
     'Auditor_Zone' => 'Auditor Zone',
@@ -24,11 +24,11 @@ return [
     'about' => 'About',
     //Traduzioni form per caricare gli annunci
     'create_your_announcement' => 'Create your announcement',
-    'product_name' => 'Product name',
+    'product_name' => 'Product name:',
     'category' => 'Category',
     'category_list'=> 'Category list',
-    'product_price' => 'Product price',
-    'description' => 'Description',
+    'product_price' => 'Product price:',
+    'description' => 'Description:',
     'button_create' => 'Create announcement',
     //Traduzioni email per assunzione di un revisore
     'request' => 'A user wants to work with us',
@@ -43,7 +43,7 @@ return [
     'auditor_description' => 'You will be able to accept or reject user-created ads',
     'insert_name' => 'Insert your name :',
     'auditor_reason' => 'Why do you want to become an auditor?',
-    'button_becomeAuditor' => 'Apply to become a reviewer',
+    'button_becomeAuditor' => 'send',
     //Traduzioni annunci da revisionare
     'is_announcement' => 'Here are all the announcements to review',
     'isnot_announcement' => 'There are no announcements to review',
@@ -54,12 +54,12 @@ return [
     'accept_announcement' => 'Accept',
     'refuse_announcement' => 'Refuse',
     //Traduzioni schermata di login
-    'user_email' => 'Email address',
-    'user_password' => 'Password',
+    'user_email' => 'Email address:',
+    'user_password' => 'Password:',
     'login_button' => 'Login',
     //Traduzioni schermata di registrazione
-    'user_name' => 'User name',
-    'password_confirmation' => 'Password confirmation',
+    'user_name' => 'User name:',
+    'password_confirmation' => 'Password confirmation:',
     //Traduzioni per la vista categoryShow
     'show_more' => 'Show more',
     'isNot_announcementCategory' => 'There are no announcements for this category',
@@ -78,4 +78,16 @@ return [
     'Utensili' => 'Weapons',
     'Vasi' => 'Pots',
     'Vinili' => 'Vinyls',
+
+    'InsertImages' => 'Imágenes del Artículo:',
+    'price' => 'Price:',
+    'Delete' => 'Delete',
+    'Message' => 'Announcement uploaded successfully, under review',
+    'Adulti' => 'Adults:',
+    'Satira' => 'Satire:',
+    'Medicina' => 'Medicine:',
+    'Violenza' => 'Violence:',
+    'Contenuto' => 'Winking Content:',
+    'message2' => 'Congratulations, you have applied to become a reviewer',
+
 ];

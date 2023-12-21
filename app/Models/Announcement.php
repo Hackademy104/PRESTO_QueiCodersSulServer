@@ -6,6 +6,7 @@ use App\Models\Image;
 use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Category;
 
 class Announcement extends Model
 {

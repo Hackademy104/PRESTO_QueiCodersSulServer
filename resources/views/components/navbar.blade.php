@@ -1,4 +1,4 @@
-<nav id="nav" class="navbar navbar-expand-lg py-1 position-sticky pb-2 mt-3 border-bottom border-secondary-subtle">
+<nav id="nav" class="navbar navbar-expand-lg py-1 position-sticky pb-2 mt-1 border-bottom border-secondary-subtle">
     
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -28,29 +28,17 @@
                     </ul>
                 </li>
                 
+                
+                @auth
                 <li class="nav-item">
-                    <a class = "nav-link" href="{{ route('diventaRevisore') }}">{{__('ui.auditor')}}</a>
+                    <a href ="{{ route('newAnnouncements') }}" class="nav-link">{{__('ui.create_announcement')}}</a>
                 </li>
 
-                @auth
+                    
+                    @endauth
                     <li class="nav-item">
-                        <a href ="{{ route('newAnnouncements') }}" class="nav-link">{{__('ui.create_announcement')}}</a>
+                        <a class = "nav-link" href="{{ route('diventaRevisore') }}">{{__('ui.auditor')}}</a>
                     </li>
-                    @if (Auth::user()->is_revisor)
-                        <li class = "nav-item">
-                            <a class="nav-link btn buttonCustom position-relative"
-                                href="{{ route('revisorIndex') }}">{{__('ui.Auditor_Zone')}}
-                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                    {{ App\Models\Announcement::toBeRevisionedCount() }}
-                                    <span class="visually-hidden">{{__('ui.Unread_Message')}}</span>
-                                </span></a>
-
-
-
-                            </li>
-                    @endif
-
-                @endauth
             </ul>
             <form class="d-flex" action="{{route('searchAnnouncements')}}" method="GET">
                 <input name='searched' class="form-control me-2" type="search" placeholder={{__('ui.search')}} aria-label="Search">
