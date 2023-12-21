@@ -40,7 +40,7 @@
         <div class="ms-custom">
 
             <h5 class="card-title">{{ __('ui.product_name') }}: {{ $announcement->name }}</h5>
-            <p class="card-text">{{ __('ui.product_price') }}: {{ $announcement->price }} $</p>
+            <p class="card-text">{{ __('ui.product_price') }}: {{ $announcement->price }} €</p>
             <p class="card-text">{{ __('ui.description') }}: {{ $announcement->description }}</p>
             <a class="my-3 border-dark card-link text-danger-emphasis link-underline link-underline-opacity-0"
             href="{{ route('categoryShow', ['category' => $announcement->category]) }}">

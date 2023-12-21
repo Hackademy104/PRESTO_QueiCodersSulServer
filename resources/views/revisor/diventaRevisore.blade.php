@@ -24,7 +24,7 @@
                     <textarea class=" border-0 rounded" name="motivation" id="id2" cols="50" rows="8"></textarea>
                     <div class="">
 
-                        <button class="opacity-75 w-25 bg-success  border-0 rounded" type="submit">{{__('ui.button_becomeAuditor')}}</button>
+                        <button class="btn buttonCustom" type="submit">{{__('ui.button_becomeAuditor')}}</button>
                     </div>
                 </form>
 

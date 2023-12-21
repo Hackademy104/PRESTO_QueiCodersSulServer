@@ -34,7 +34,7 @@
                         <input name="password_confirmation" type="password" class="form-control"
                             id="password_confirmation">
                     </div>
-                    <button type="submit" class="btn btn-primary">{{__('ui.register')}}</button>
+                    <button type="submit" class="btn btn-primary buttonCustom">{{__('ui.register')}}</button>
                 </form>
             </div>
         </div>

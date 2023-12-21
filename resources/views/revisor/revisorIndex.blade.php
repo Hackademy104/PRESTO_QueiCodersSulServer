@@ -41,7 +41,7 @@
                                 @endif
                             <div class="col-12 mb-4">
                                 <h5 class="card-title">{{ __('ui.title') }} {{ $announcement_to_check->name }}</h5>
-                                <p class="card-text">{{ __('ui.description_announcement') }} {{ $announcement_to_check->description }} $</p>
+                                <p class="card-text">{{ __('ui.description_announcement') }} {{ $announcement_to_check->description }}</p>
                             
                             </div>
                             <div class="row w-100 justify-content-center mb-4">

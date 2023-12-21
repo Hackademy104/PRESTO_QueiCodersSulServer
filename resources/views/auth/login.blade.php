@@ -25,7 +25,7 @@
                         <label for="password" class="form-label">{{__('ui.user_password')}}</label>
                         <input name="password" type="password" class="form-control" id="password">
                     </div>
-                    <button type="submit" class="btn btn-primary">{{__('ui.login_button')}}</button>
+                    <button type="submit" class="btn buttonCustom">{{__('ui.login_button')}}</button>
                 </form>
             </div>
         </div>

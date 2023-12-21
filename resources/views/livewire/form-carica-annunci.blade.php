@@ -28,7 +28,7 @@
         </div>
 
         <div class="mb-3">
-            <label for="price" class="form-label mt-3">{{__('ui.product_price')}}</label>
+            <label for="price" class="form-label mt-3">{{__('ui.product_price')}} €</label>
             <input wire:model='price' type="text" class="form-control" id="price" aria-describedby="emailHelp">
         </div>
 
@@ -47,7 +47,7 @@
                         @foreach ($images as $key => $image)
                             <div class="col-12 my-3">
                                 <div class="img-preview mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}});"></div>
-                                <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">{{__('ui.Delete')}}</button>
+                                <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto buttonCustom" wire:click="removeImage({{$key}})">{{__('ui.Delete')}}</button>
                             </div>
                         @endforeach
                     </div>
@@ -62,7 +62,7 @@
         </div>
 
 
-        <button type="submit" class="btn btn-primary mt-3">{{__('ui.button_create')}}</button>
+        <button type="submit" class="btn btn-primary mt-3 buttonCustom">{{__('ui.button_create')}}</button>
     </form>
 
 
