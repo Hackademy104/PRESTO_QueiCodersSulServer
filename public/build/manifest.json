@@ -1,0 +1,16 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-086da0d1.css",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/css/fonts/DirtyCrown.ttf": {
+    "file": "assets/DirtyCrown-c6a29b45.ttf",
+    "src": "resources/css/fonts/DirtyCrown.ttf"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-0873460a.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  }
+}
